@@ -46,7 +46,8 @@ class Easyer {
                     JOptionPane.showMessageDialog(null,"NÃO HOUVE LUCRO"+"\n\nA perda é de: "+PercentageIncreaseNoRate(valueInitial,valueFinal)+"%");
                 }else{
                     JOptionPane.showMessageDialog(null,"HOUVE LUCRO"+"\n\nO ganho é de: "+PercentageIncreaseNoRate(valueInitial,valueFinal)+"%");
-                }    
+                }
+                break;    
             }
             case '3':{
                 valueInitial = Double.parseDouble(JOptionPane.showInputDialog("Valor: "));
