@@ -33,9 +33,9 @@ class Easyer {
                 valueFinal = Double.parseDouble(JOptionPane.showInputDialog("Valor Final: "));
                 rate = Double.parseDouble(JOptionPane.showInputDialog("Taxa: "));
                 if(PercentageIncreaseWithRate(valueInitial,valueFinal,rate) < valueFinal){
-                    JOptionPane.showMessageDialog(null,"NÃO HOUVE LUCRO"+"\n\nA perda é de: "+PercentageIncreaseWithRate(valueInitial,valueFinal,rate)+"%");
+                    JOptionPane.showMessageDialog(null,"NÃO HOUVE LUCRO"+"\n\nA perda é de: "+PercentageIncreaseWithRate(valueInitial,valueFinal,rate)+"%","CUIDADO! O_O", JOptionPane.WARNING_MESSAGE);
                 }else{
-                    JOptionPane.showMessageDialog(null,"HOUVE LUCRO"+"\n\nO ganho é de: "+PercentageIncreaseWithRate(valueInitial,valueFinal,rate)+"%");
+                    JOptionPane.showMessageDialog(null,"HOUVE LUCRO"+"\n\nO ganho é de: "+PercentageIncreaseWithRate(valueInitial,valueFinal,rate)+"%","SUCESSO! ^^", JOptionPane.INFORMATION_MESSAGE);
                 }
                 break;
             }
@@ -43,19 +43,19 @@ class Easyer {
                 valueInitial = Double.parseDouble(JOptionPane.showInputDialog("Valor Inicial: "));
                 valueFinal = Double.parseDouble(JOptionPane.showInputDialog("Valor Final: "));
                 if(PercentageIncreaseNoRate(valueInitial,valueFinal) < valueFinal){
-                    JOptionPane.showMessageDialog(null,"NÃO HOUVE LUCRO"+"\n\nA perda é de: "+PercentageIncreaseNoRate(valueInitial,valueFinal)+"%");
+                    JOptionPane.showMessageDialog(null,"NÃO HOUVE LUCRO"+"\n\nA perda é de: "+PercentageIncreaseNoRate(valueInitial,valueFinal)+"%","CUIDADO! O_O", JOptionPane.WARNING_MESSAGE);
                 }else{
-                    JOptionPane.showMessageDialog(null,"HOUVE LUCRO"+"\n\nO ganho é de: "+PercentageIncreaseNoRate(valueInitial,valueFinal)+"%");
+                    JOptionPane.showMessageDialog(null,"HOUVE LUCRO"+"\n\nO ganho é de: "+PercentageIncreaseNoRate(valueInitial,valueFinal)+"%","SUCESSO! ^^", JOptionPane.INFORMATION_MESSAGE);
                 }
                 break;    
             }
             case '3':{
                 valueInitial = Double.parseDouble(JOptionPane.showInputDialog("Valor: "));
                 percentage = Double.parseDouble(JOptionPane.showInputDialog("Porcentagem: "));
-                JOptionPane.showMessageDialog(null,"O valor é: "+CalcPercentage(valueInitial,percentage));
+                JOptionPane.showMessageDialog(null,"O valor é: "+CalcPercentage(valueInitial,percentage)+"%");
                 break;
             }
-            default: JOptionPane.showMessageDialog(null,"Opção invalida, calculos não foram realizados!");
+            default: JOptionPane.showMessageDialog(null,"Opção invalida, calculos não foram realizados!","U.U", JOptionPane.ERROR_MESSAGE);
         }
         System.exit(0);
     }
