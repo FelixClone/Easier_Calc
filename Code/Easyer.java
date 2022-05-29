@@ -20,11 +20,25 @@ class Easyer {
         realPercentage = (vFinal-vInitial)/vInitial*100;
         return realPercentage;
     }
+    public static double HowManyPercentMore(double value, double percentage){
+        double realPercentage;
+        realPercentage = percentage/100;
+        realPercentage = realPercentage +1;
+        realPercentage = value * realPercentage;
+        return realPercentage;
+    }
+    public static void PercentDiscount(double value, double percentage){
+        double realPercentage, SalesValue;
+        realPercentage = (value * percentage)/100;
+        SalesValue = value - realPercentage;
+        JOptionPane.showMessageDialog(null,"O valor de venda é: "+SalesValue+"\nDesconto de "+realPercentage,"U_U",JOptionPane.INFORMATION_MESSAGE);
+    }
+
 
     public static void main(String[]args){
         double valueInitial,valueFinal,percentage,rate;
         char op=1;
-        String msgEnter= "Escolha a opção desejada:\n\n1- Aumento Porcentual incluindo taxa \n2- Aumento Porcentual sem taxa\n3- Porcentagem";
+        String msgEnter= "Escolha a opção desejada:\n\n1- Aumento porcentual incluindo taxa \n2- Aumento porcentual sem taxa\n3- Porcentagem\n4- Porcentagem a mais\n5- Desconto porcentual";
         op = (JOptionPane.showInputDialog(msgEnter)).charAt(0);
         
         switch(op){
@@ -55,6 +69,21 @@ class Easyer {
                 JOptionPane.showMessageDialog(null,"O valor é: "+CalcPercentage(valueInitial,percentage)+"%");
                 break;
             }
+            case '4':{
+                valueInitial = Double.parseDouble(JOptionPane.showInputDialog("Valor: "));
+                percentage = Double.parseDouble(JOptionPane.showInputDialog("Porcentagem: "));
+                
+                JOptionPane.showMessageDialog(null,"O valor é: "+HowManyPercentMore(valueInitial,percentage),"U_U",JOptionPane.INFORMATION_MESSAGE);
+                break;
+            }
+            case '5':{
+                valueInitial = Double.parseDouble(JOptionPane.showInputDialog("Valor: "));
+                percentage = Double.parseDouble(JOptionPane.showInputDialog("Desconto em porcentagem: "));
+                PercentDiscount(valueInitial,percentage);
+                
+                break;
+            }
+
             default: JOptionPane.showMessageDialog(null,"Opção invalida, calculos não foram realizados!","U.U", JOptionPane.ERROR_MESSAGE);
         }
         System.exit(0);
