@@ -1,4 +1,4 @@
-# Easyer_Calc
+# Easier_Calc
 <h4 align="center">
    ⚠Em desenvolvimento⚠<br>
 </h4>
